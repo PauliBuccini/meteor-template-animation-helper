@@ -78,7 +78,8 @@ To do that call the following inside a helper or event of that template:
 AnimateTemplate = function(values){
   // console.log('AnimateTemplate')
   // console.log(this)
-    var data = (this instanceof Window) ? {} : this;
+    // var data = (this instanceof Window) ? {} : this;
+    var data = this;
 
     if(values && _.isObject(values.hash))
         data = _.extend(data, {
